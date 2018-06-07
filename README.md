@@ -1,4 +1,3 @@
 # Todo List Backend
 
-## Introduction
-This is a RESTful style todo list backend api server.
+This is a RESTful style api server for todo list app.
