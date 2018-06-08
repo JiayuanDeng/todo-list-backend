@@ -17,9 +17,12 @@ var jwtLib = {
     return token;
   },
   getRes: (email) => {
+    var accessToken = jwtLib.sign(email);
+    var decodedAccessToken = jwt.decode(accessToken, {json: true});
     return {
       credential: {
-        access_token: jwtLib.sign(email)
+        access_token: accessToken,
+        expire: decodedAccessToken.exp
       }
     }
   }
