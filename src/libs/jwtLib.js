@@ -22,6 +22,7 @@ var jwtLib = {
     return {
       credential: {
         access_token: accessToken,
+        email: decodedAccessToken.email,
         expire: decodedAccessToken.exp
       }
     }
